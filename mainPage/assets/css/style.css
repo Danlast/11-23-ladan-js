@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --main-font: "Roboto Condensed", sans-serif;
+    --main-color: #4b5563;
+    --main-white: #f9f9f9;
+    --main-yellow: #E2C437;
+    --main-black: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    font-family: var(--main-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+      font-size: 16px;
+      border-radius: 6px;
+      text-wrap: nowrap;
+}
+
+/* img {
+    width: 100%;
+    height: 100%;
+} */
+
+body {
+    background-color: var(--main-white);
+    font-family: var(--main-font);
+    transition: all 0.3ms ease-in-out;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    /*  */
+    padding-bottom: 100px;
+}
+
+.container{
+    width: 1200px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.header-wrapper{
+    padding: 30px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-logo {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropbtn {
+    background-color: var(--main-white);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: var(--main-white);
+    min-width: 80px;
+}
+
+.dropdown-content a {
+    background-color: var(--main-white);
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #FFC700;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #FFC700}
+
+
+
+
+
+
+.links-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.link{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all ease-in-out 0.3s;
+}
+
+.link:hover{
+    background-color:#FFC700;
+}
