@@ -5,42 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>something</title>
+    <title>sm5</title>
 </head>
 <body>
-    <header>
-        <div class="header-wrapper container">
-            <div class="header-logo">
-                <h1>Danlast</h1>
-            </div>
-
-
-            <div class="header-menu">
-                <div class="dropdown">
-                    <button class="dropbtn">Get in touch</button>
-                    <div class="dropdown-content">
-                      <a target="_blank" href="https://github.com/Danlast">GitHub</a>
-                      <a target="_blank" href="https://t.me/Dsin0">Telegram</a>
-                    </div>
-                  </div> 
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <div class="main-wrapper container">
-            nothing
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-wrapper container">
-            ©2024 Danlast
-        </div>
-    </footer>
+    <form id="addProduct" onsubmit="createProduct(event)">
+        <input type="text" name="title" placeholder="title">
+        <input type="text" name="price" placeholder="price">
+        <input type="text" name="description" placeholder="description">
+        <button type="submit">Add product</button>
+    </form>
+      
+    <script>
+        const createProductForm = document.querySelector('#addProduct');
     
+        async function createProduct(event) {
+            event.preventDefault();
+            let response;
+            try {
+                const call = await fetch('https://fakestoreapi.com/products', {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        title: createProductForm.title.value,
+                        price: createProductForm.price.value,
+                        description: createProductForm.description.value,
+                        image: 'https://i.pravatar.cc',
+                        category: 'electronic'
+                    })
+                });
+                response = await call.json(); // Assign response here
+            } catch (error) {
+                alert('🚨 Ошибка: ' + error); // Changed to string concatenation
+                return;
+            }
     
-    
-    <script src="./js/script.js"></script>
+            console.log(response); // Now this works!
+        } 
+    </script>    
 </body>
 </html>

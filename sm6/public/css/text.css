@@ -1,0 +1,18 @@
+h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline #0f5bce;
+}

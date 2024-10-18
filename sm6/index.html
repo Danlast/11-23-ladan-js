@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/css/index.css">
+  <script src="public/js/index.js" defer></script>
+  <title>menu-ui</title>
+</head>
+
+<body>
+  <header class="container--full">
+    <button class="burger__button" onclick="triggerBurger(event)">
+      <img src="public/images/icons/menu.svg" alt="icon">
+    </button>
+    <h1 class="logotype">Clone</h1>
+  </header>
+
+  <main>
+    <div class="burger">
+      <div class="container--full burger__content">
+        <ul class="burger__nav-list"><div id="myModal" class="modal">
+          <div class="modal__content">
+            <span class="modal__close" onclick="closeModal()">&#x2715;</span>
+            <h3>Delete account forever?</h3>
+            <div class="modal__buttons">
+              <button onclick="closeModal()">Cancel</button>
+              <button class="danger outline" onclick="deleteUser(event, '5', 'e#J$#IFE3u423ef')">Delete</button>
+            </div>
+          </div>
+        </div>
+          <li>
+            <a href="#">
+              Main page
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Resources
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Something else
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Test
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="profile">
+      <div class="container profile__content">
+        <h1>Profile</h1>
+        <div class="profile__item">
+          <div class="profile__info">
+            <div class="avatar">
+              <img class="avatar__inner"
+                src="" alt="avatar">
+            </div>
+            <div>
+              <p class="profile-name">Test</p>
+              <p class="profile-age">test</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="profile__item danger-zone">
+          <h2>Danger zone</h2>
+          <button class="danger" onclick="openModal()">
+            <img src="public/images/icons/delete_forever.svg" alt="icon">
+            <span>Delete profile</span>
+          </button>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <!-- <div id="myModal" class="modal">
+    <div class="modal__content">
+      <span class="modal__close" onclick="closeModal()">&#x2715;</span>
+      <h3>Delete account forever?</h3>
+      <div class="modal__buttons">
+        <button onclick="closeModal()">Cancel</button>
+        <button class="danger outline" onclick="deleteUser(event, '5', 'e#J$#IFE3u423ef')">Delete</button>
+      </div>
+    </div>
+  </div> -->
+</body>
+
+</html>

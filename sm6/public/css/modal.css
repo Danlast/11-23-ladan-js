@@ -1,0 +1,64 @@
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.modal__buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.buttons>button {
+  max-width: 10rem;
+}
+
+.modal.open {
+  display: block;
+}
+
+.modal__content {
+  border-radius: 1rem;
+  background-color: #1c1c1c;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  animation: slide-down 0.3s ease-out;
+}
+
+.modal__close {
+  color: #adadad;
+  float: right;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  color: #dddddd;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
