@@ -1,0 +1,39 @@
+.catalog {
+    background-color: #f5f5f5;
+    margin: 0 auto;
+	max-width: 1300px;
+	width: 100%;
+}
+
+.catalog__title {
+    margin-top: 40px;
+    font-family: Ubuntu;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.catalog__line {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Ubuntu;
+    font-size: 16px;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(410px, 1fr));
+    gap: 20px;
+    width: 1300px;
+}
+
+.catalog__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin: 80px 0 80px 0;
+}
+.category{
+    display: flex;
+    gap: 10px;
+}
